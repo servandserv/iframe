@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Child 1</title>
+        <link rel="stylesheet" href="src/css/child.styles.css">
+    </head>
+
+    <body style="background:magenta;">
+        <h1>Child frame 1</h1>
+        <div>
+            <label for="select">Select to change parent data</label><br/>
+            <select id="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div>
+            or go to <a href="child2.html">child2.html</a>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <script type="text/javascript" src="src/js/iframemediator.js">;</script>
+        <script type="text/javascript">
+            (function(){
+            
+                
+                var select = document.getElementById('select');
+                select.addEventListener('change', function(event){
+                    window.iframeMediator.postMessage({
+                        callback: "setSelect",
+                        args: event.target.value
+                    });
+                });
+                
+            })();
+        </script>
+    </body>
+</html>

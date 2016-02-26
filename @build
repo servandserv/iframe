@@ -1,0 +1,4 @@
+#!/bin/bash
+
+java -jar tools/yuicompressor-2.4.8.jar --type js src/js/iframemediator.js > dest/js/iframemediator.min.js
+cat src/js/iframemediator.js > dest/js/iframemediator.js

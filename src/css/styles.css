@@ -1,0 +1,24 @@
+html,
+body {
+    margin:0,
+    padding:0;
+    font-family: Tahoma;
+    color: rgb(21,21,21);
+}
+body > div {
+    display: flex;
+    flex-flow: col wrap;
+}
+
+body > h1 { 
+    text-align: center;
+}
+
+h2 > span {
+    color: rgb(255,0,0);
+}
+
+body > div > div {
+    flex:1;
+    margin: 2rem;
+}
